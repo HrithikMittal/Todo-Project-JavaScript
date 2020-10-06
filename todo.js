@@ -1,6 +1,6 @@
 onADD = function(){
     let addData = document.getElementById('input').value;
-    
+
     if(addData == "")
     {
         alert("Please Write Something in it!");
@@ -9,7 +9,7 @@ onADD = function(){
     else{
         var myNewTODO = document.createElement('li');
         myNewTODO.classList.add('mycheck');
-        
+
 
         var inside = document.createElement('input');
         inside.setAttribute("type","checkbox");
@@ -17,14 +17,15 @@ onADD = function(){
 
         var written = document.createElement('label');
         written.textContent = addData;
-        
+
         myNewTODO.appendChild(inside);
     myNewTODO.appendChild(written);
-        
+
         console.log(myNewTODO);
-        
+
         var addon = document.getElementById('list');
         addon.appendChild(myNewTODO);
+        document.getElementById('input').value="";
 	}
 }
 onREMOVE = function(){
@@ -35,4 +36,4 @@ onREMOVE = function(){
             ul.removeChild(li[index])
         }
     }
-}
+} 
